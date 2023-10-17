@@ -19,42 +19,67 @@ h3 {
     font-size: 24px;
 }
 
+header{
+    background-color: #EAC926;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+header div.top-header div.logo img{
+    height: 30px;
+}
+
 header div.top-header {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px 0;
+    padding:16px;
 }
 
-header div.top-header h2 {
+header  h2 {
     text-align: center;
     font-size: 12px;
-    margin: 20px 0;
+    width: 100%;
+    margin: 16px 0;
 }
 
-header div.logo,
-div.form {
+header div.logo{
     width: 50%;
 }
 
-header .form .input {
-    background-color: #fff;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
+header div.form {
+    width: 50%;
+    display:flex;
 }
 
-header .form .submit {
-    display: inline-flex;
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #666;
+header div.form .nav-search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-self: center;
 }
 
-header {
-    background-color: #EAC926;
-    padding: 20px;
+
+header div.top-header div.form .nav-search input {
+    width: 85%;
+    border-radius: 5px;
+    padding: 5px;
+    height: 24px;
+    border:none;
+    color: #666;
+    background-color: #fff;
+}
+
+header div.top-header div.form .nav-search button {
+    width: 15%;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    color: #666;
+    cursor:pointer;
 }
 
 header nav {
@@ -82,18 +107,23 @@ header ul li a {
     color: #000;
 }
 
-
 header div.burger-menu {
+    display: flex;
+    justify-content: center;
     background-color: #0044aa;
     border-radius: 8px;
     color: #fff;
-    max-width: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 18px;
-    padding: 15px 0;
-    text-align: center;
-    margin: auto;
+    align-items: center;
 }
 
+section.banner img {
+    width: 100%;
+}
+
+/*
 main.last-visit,
 main.sale{
     display: flex;
@@ -157,9 +187,6 @@ h3,
     color: #666;
 }
 
-section.banner img {
-    width: 100%;
-}
 
 main {
     width: 90%;
@@ -211,15 +238,41 @@ footer div.footer-section p {
     font-size: 12px;
 }
 
-
+*/
 
 
 
 /* navegacion tablet */
 
 @media (min-width: 481px) {
-    div.logo{
-        max-width: 200px;
+    header {
+        align-items: stretch;
+    }
+
+    header div.top-header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    header div.top-header div.logo {
+        width: 30%;
+    }
+
+    header div.top-header div.logo img{
+        height: 50px;
+    }
+
+    header div.top-header div.form{
+        width: 35%;
+    }
+
+    header div.top-header div.form .nav-search{
+        max-width: 250px;
+    }
+
+    header h2{
+        width:35%;
+        text-align: end;
     }
 
     header div.burger-menu {
@@ -275,7 +328,10 @@ footer div.footer-section p {
 }
 
 @media (min-width: 769px) {
-    div.logo{
+    header h2{
+        font-size: 16px;
+    }
+    div.logo img{
         max-width: 250px;
     }
     main section div.products article {
