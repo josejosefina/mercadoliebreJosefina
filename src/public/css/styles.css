@@ -15,46 +15,38 @@ p {
     font-size: 12px;
 }
 
-h3 {
-    font-size: 24px;
-}
-
-header{
+header {
     background-color: #EAC926;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     padding-bottom: 16px;
-}
-
-header div.top-header div.logo img{
-    height: 30px;
 }
 
 header div.top-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding:16px;
+    padding: 8px;
 }
 
-header  h2 {
+header div.top-header h2 {
     text-align: center;
     font-size: 12px;
-    width: 100%;
-    margin: 16px 0;
+    margin: auto;
+    margin: 20px;
 }
 
-header div.logo{
+header div.top-header div.logo {
     width: 50%;
 }
 
-header div.form {
+header div.top-header div.form {
     width: 50%;
-    display:flex;
+    display: flex;
 }
 
-header div.form .nav-search{
+header div.top-header div.form .nav-search {
     width: 100%;
     display: flex;
     align-items: center;
@@ -67,7 +59,7 @@ header div.top-header div.form .nav-search input {
     border-radius: 5px;
     padding: 5px;
     height: 24px;
-    border:none;
+    border: none;
     color: #666;
     background-color: #fff;
 }
@@ -79,7 +71,7 @@ header div.top-header div.form .nav-search button {
     background-color: #fff;
     border: none;
     color: #666;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 header nav {
@@ -105,6 +97,7 @@ header ul li {
 header ul li a {
     text-decoration: none;
     color: #000;
+    font-size: 2.1vw;
 }
 
 header div.burger-menu {
@@ -123,25 +116,60 @@ section.banner img {
     width: 100%;
 }
 
-/*
-main.last-visit,
-main.sale{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-article div.main-article {
+main {
     width: 100%;
-    padding: 20px;
-    position: relative;
-    border-top: 1px solid #ebebeb;
+    background-color: #ebebeb;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.main-article>i {
+main div.main-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main div.main-content .articles{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main div.main-content h3 {
+    color: #666;
+    width: 100%;
+    font-size: 24px;
+    display:block;
+}
+
+main div.main-content article{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+main div.main-content article img {
+    width: 100%;
+}
+
+main div.main-content article div.details-cards {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+}
+
+main div.main-content article div.details-cards i {
     display: block;
+    color: #39b54a;
     font-size: 16px;
     padding: 5px;
     width: 30px;
@@ -154,55 +182,30 @@ article div.main-article {
     top: -15px;
 }
 
-
-
-.discounts,
-main i {
-    color: #39b54a
+main div.main-content article div.details-cards i:hover{
+    transform: rotate(-90deg);
 }
 
+main div.main-content article div.details-cards div.prices-discounts-cont{
+    width:100%;
+    display: flex;
+}
 
-.prices {
+main div.main-content article div.details-cards div.prices-discounts-cont .discounts {
+    color: #39b54a;
+    width: 70%;
+    font-size: 16px;
+}
+
+main div.main-content article div.details-cards div.prices-discounts-cont .prices {
     font-size: 18px;
     width: 30%;
 }
 
-.discounts {
-    width: 70%;
-}
-
-
-.discounts,
-.description {
+main div.main-content article div.details-cards .description {
     font-size: 16px;
-}
-
-.description {
     display: none;
 }
-
-
-h3,
-.description {
-    color: #666;
-}
-
-
-main {
-    width: 90%;
-    margin: 0 auto;
-}
-
-main section article {
-    background-color: #fff;
-    margin: 10px 0;
-}
-
-
-main section article img {
-    width: 100%;
-}
-
 
 footer {
     background-color: #ffffff;
@@ -238,11 +241,6 @@ footer div.footer-section p {
     font-size: 12px;
 }
 
-*/
-
-
-
-/* navegacion tablet */
 
 @media (min-width: 481px) {
     header {
@@ -252,27 +250,29 @@ footer div.footer-section p {
     header div.top-header {
         flex-wrap: nowrap;
         justify-content: space-between;
+        align-items: center;
     }
 
-    header div.top-header div.logo {
+    header div.top-header div.logo{
         width: 30%;
     }
 
-    header div.top-header div.logo img{
-        height: 50px;
+    header div.top-header div.logo img {
+        width:100%;
     }
 
-    header div.top-header div.form{
+    header div.top-header div.form {
         width: 35%;
     }
 
-    header div.top-header div.form .nav-search{
-        max-width: 250px;
+    header div.top-header div.form .nav-search {
+        width: 100%;
     }
 
-    header h2{
-        width:35%;
+    header h2 {
+        width: 35%;
         text-align: end;
+        padding: 0px;
     }
 
     header div.burger-menu {
@@ -284,12 +284,16 @@ footer div.footer-section p {
         padding: 20px 0;
     }
 
-    main{
-        margin-bottom: 25px;
+    main div.main-content .articles{
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around;
     }
 
-    main section article{
+    main div.main-content article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
     }
 
     header .nav-bar {
@@ -305,36 +309,19 @@ footer div.footer-section p {
     header .nav-bar ul li {
         margin: 0 5px;
     }
-
-    main section article{
-        display: block;
-    }
-
-    main div.products {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    main section div.products article {
-        width: 45%;
-    }
-    .prices,
-    .discounts{
-        width: 50%;
-    }
 }
 
 @media (min-width: 769px) {
-    header h2{
+    header h2 {
         font-size: 16px;
     }
-    div.logo img{
-        max-width: 250px;
+
+    div.logo img {
+        height:50px;
     }
-    main section div.products article {
+
+    main div.main-content article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 22%;
     }
 }
