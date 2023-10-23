@@ -1,4 +1,6 @@
-main div.register-form {
+
+main div.register-form,
+main div.login-form {
     background-color:#ebebeb;
     padding: 10px 15px;
     font-family:'Roboto', sans-serif;
@@ -7,11 +9,13 @@ main div.register-form {
     display: flex;
     flex-direction:column;
 }
-main div.register-form div.control-form{
+main div.register-form div.control-form,
+main div.login-form div.control-form{
     margin-bottom: 15px;
 }
 
-main div.register-form div.control-form label{
+main div.register-form div.control-form label,
+main div.login-form div.login-form label{
     margin-bottom: 5px;
     display: block;
 }
