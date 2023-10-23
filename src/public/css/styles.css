@@ -129,7 +129,7 @@ main div.main-content {
     width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -145,6 +145,7 @@ main div.main-content h3 {
     width: 100%;
     font-size: 24px;
     display:block;
+    margin-bottom: 10px;
 }
 
 main div.main-content article{
@@ -204,8 +205,15 @@ main div.main-content article div.details-cards div.prices-discounts-cont .price
 
 main div.main-content article div.details-cards .description {
     font-size: 16px;
-    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 300ms;
+    color:#666;
 }
+main div.main-content article:hover div.details-cards .description{
+    opacity: 1;
+}
+
 
 footer {
     background-color: #ffffff;
@@ -280,8 +288,9 @@ footer div.footer-section p {
     }
 
     .description {
-        display: flex;
-        padding: 20px 0;
+        display: block;
+        color: #666;
+        margin-top: 15px;
     }
 
     main div.main-content .articles{
@@ -294,6 +303,12 @@ footer div.footer-section p {
     main div.main-content article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
+        transition: .15s ease all;
+    }
+
+    main div.main-content article:hover{
+        width:46%;
+        box-shadow: 0px 0px 12px rgb(70, 70, 70);
     }
 
     header .nav-bar {
@@ -321,7 +336,30 @@ footer div.footer-section p {
     }
 
     main div.main-content article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 22%;
+        box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
+        min-width: 18%;
+        width: 23%;
+    }
+
+    main div.main-content article:hover{
+        width: 24%;
+    }
+    
+    footer div.footer{
+        display: flex;
+    }
+
+    footer div.footer div.footer-section{
+        width: 33%;
+    }
+
+    footer div.footer div.footer-section i:hover{
+        color: #EAC926;
+    }
+
+    .Copyright{
+        width: 75%;
+        color: #666;
+        font-size: 10px;
     }
 }
